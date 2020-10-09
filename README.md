@@ -6,6 +6,8 @@ A Flutter package for simplifying the creation of Animated Controller and using 
 
 This package help to only focus on animating your toggle animated ui without initializing much of the logic in initState.
 
+<img src="assets/animate.gif">
+
 ## EXAMPLE
 
 import 'package:flutter/material.dart';
