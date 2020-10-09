@@ -1,4 +1,4 @@
-# flutter_toggel_animated
+# flutter_toggle_animated
 
 A Flutter package for simplifying the creation of Animated Controller and using it for types of toggling animations with minimum efforts.
 
