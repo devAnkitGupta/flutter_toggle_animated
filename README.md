@@ -1,13 +1,14 @@
 # flutter_toggel_animated
 
-A new Flutter package for simplifying the creation of Animated Controller and using it for types of toggling animations.
+A Flutter package for simplifying the creation of Animated Controller and using it for types of toggling animations with minimum efforts.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+This package help to only focus on animating your toggle animated ui without initializing much of the logic in initState.
+
+
+
+
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 

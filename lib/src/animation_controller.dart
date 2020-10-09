@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class ToggleController extends ChangeNotifier {
-
   // CurrentAnimationState initialize as Closed
   CurrentAnimationState _state = CurrentAnimationState.CLOSED;
 
@@ -9,10 +8,10 @@ class ToggleController extends ChangeNotifier {
   AnimationController _animating;
 
   ToggleController({
-    @required TickerProvider vsync, 
-    @required Duration openDuration,
+    @required TickerProvider vsync,
+    @required Duration animationDuration,
   }) : _animating =
-            new AnimationController(vsync: vsync, duration: openDuration) {
+            new AnimationController(vsync: vsync, duration: animationDuration) {
     _animating
       ..addListener(notifyListeners)
       ..addStatusListener((status) {
@@ -39,7 +38,7 @@ class ToggleController extends ChangeNotifier {
   get state => _state;
 
   // Provids the current value of animation controller
-  double get currentPercentOpen => _animating.value; 
+  double get currentPercentOpen => _animating.value;
 
   // returns boolean for checking if the current animation is completed.
   bool isOpen() {
@@ -61,12 +60,12 @@ class ToggleController extends ChangeNotifier {
     return _state == CurrentAnimationState.CLOSING;
   }
 
- //  push the animation to run in forward play
+  //  push the animation to run in forward play
   void open() {
     _animating.forward();
   }
 
- //  push the animation to run in reverse play
+  //  push the animation to run in reverse play
   void close() {
     _animating.reverse();
   }
