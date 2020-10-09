@@ -1,6 +1,6 @@
 name: flutter_toggle_animated
 description: A new Flutter package for simplifying the creation of Animated Controller for creating various animations.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/akku-akki/flutter_toggel_animated
 
 environment:
