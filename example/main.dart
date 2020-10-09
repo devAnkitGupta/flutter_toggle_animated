@@ -102,6 +102,12 @@ class _MyHomePageState extends State<MyHomePage>
       ],
     );
   }
+
+  @override
+  void dispose() {
+    _animatedController.dispose();
+    super.dispose();
+  }
 }
 
 class BuildListButtons extends StatelessWidget {
