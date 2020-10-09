@@ -8,7 +8,7 @@ This package help to only focus on animating your toggle animated ui without ini
 
 <img src="assets/animate.gif">
 
-## EXAMPLE
+## Example
 
 import 'package:flutter/material.dart';
 import 'package:flutter_toggle_animated/flutter_toggle_animated.dart';
