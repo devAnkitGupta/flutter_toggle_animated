@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ToggleController extends ChangeNotifier {
-  // CurrentAnimationState initialize as Closed
+  /// CurrentAnimationState initialize as Closed
   CurrentAnimationState _state = CurrentAnimationState.CLOSED;
 
-  // Animation Controller which is being animated
+  /// Animation Controller which is being animated
   AnimationController _animating;
 
   ToggleController({
@@ -34,43 +34,43 @@ class ToggleController extends ChangeNotifier {
       });
   }
 
-  // state: this provides of currentAnimationState of Animation Controller _animating
+  /// state: this provides of currentAnimationState of Animation Controller _animating
   get state => _state;
 
-  // Provids the current value of animation controller
+  /// Provids the current value of animation controller
   double get currentPercentOpen => _animating.value;
 
-  // returns boolean for checking if the current animation is completed.
+  /// returns boolean for checking if the current animation is completed.
   bool isOpen() {
     return _state == CurrentAnimationState.OPEN;
   }
 
-  // returns boolean for checking if the current animation is running forward.
+  /// returns boolean for checking if the current animation is running forward.
   bool isOpening() {
     return _state == CurrentAnimationState.OPENING;
   }
 
-  // returns boolean for checking if the current animation is dismissed.
+   /// returns boolean for checking if the current animation is dismissed.
   bool isClosed() {
     return _state == CurrentAnimationState.CLOSED;
   }
 
-  // returns boolean for checking if the current animation is running in reverse direction.
+  /// returns boolean for checking if the current animation is running in reverse direction.
   bool isClosing() {
     return _state == CurrentAnimationState.CLOSING;
   }
 
-  //  push the animation to run in forward play
+  ///  push the animation to run in forward play
   void open() {
     _animating.forward();
   }
 
-  //  push the animation to run in reverse play
+  ///  push the animation to run in reverse play
   void close() {
     _animating.reverse();
   }
 
-// Toggle the current animation
+/// Toggle the current animation
   void toggle() {
     if (isClosed()) {
       open();
@@ -80,6 +80,6 @@ class ToggleController extends ChangeNotifier {
   }
 }
 
-// Enum which has four state of current running animation
+/// Enum which has four state of current running animation
 
 enum CurrentAnimationState { CLOSED, OPENING, OPEN, CLOSING }
