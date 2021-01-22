@@ -6,7 +6,7 @@ A Flutter package for simplifying the creation of Animated Controller and using 
 
 This package help to only focus on animating your toggle animated ui without initializing much of the logic in initState.
 
-<img src='https://raw.githubusercontent.com/akku-akki/flutter_toggle_animated/blob/master/assets/animate.gif' width='300' height='500' >
+<img src='https://github.com/akku-akki/flutter_toggle_animated/blob/master/assets/animate.gif' width='300' height='500' >
 
 
 ## Usage
