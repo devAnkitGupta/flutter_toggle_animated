@@ -5,6 +5,7 @@ class ToggleController extends ChangeNotifier {
   CurrentAnimationState _state = CurrentAnimationState.CLOSED;
 
   /// Animation Controller which is being animated
+
   AnimationController _animating;
 
   ToggleController({
@@ -50,7 +51,7 @@ class ToggleController extends ChangeNotifier {
     return _state == CurrentAnimationState.OPENING;
   }
 
-   /// returns boolean for checking if the current animation is dismissed.
+  /// returns boolean for checking if the current animation is dismissed.
   bool isClosed() {
     return _state == CurrentAnimationState.CLOSED;
   }
@@ -70,7 +71,7 @@ class ToggleController extends ChangeNotifier {
     _animating.reverse();
   }
 
-/// Toggle the current animation
+  /// Toggle the current animation
   void toggle() {
     if (isClosed()) {
       open();
