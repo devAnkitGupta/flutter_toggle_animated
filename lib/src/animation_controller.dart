@@ -9,8 +9,8 @@ class ToggleController extends ChangeNotifier {
   AnimationController _animating;
 
   ToggleController({
-    @required TickerProvider vsync,
-    @required Duration animationDuration,
+    required TickerProvider vsync,
+    required Duration animationDuration,
   }) : _animating =
             new AnimationController(vsync: vsync, duration: animationDuration) {
     _animating

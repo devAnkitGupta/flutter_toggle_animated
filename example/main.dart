@@ -23,7 +23,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  ToggleController _animatedController;
+  late ToggleController _animatedController;
 
   @override
   void initState() {
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage>
       body: Stack(
         children: [
           Center(
-            child: RaisedButton(
+            child: ElevatedButton(
               onPressed: () {
                 _animatedController.toggle();
               },
@@ -112,15 +112,15 @@ class _MyHomePageState extends State<MyHomePage>
 
 class BuildListButtons extends StatelessWidget {
   const BuildListButtons({
-    Key key,
+    Key? key,
     this.icon,
     this.txt,
     this.fun,
   }) : super(key: key);
 
-  final IconData icon;
-  final String txt;
-  final VoidCallback fun;
+  final IconData? icon;
+  final String? txt;
+  final VoidCallback? fun;
 
   @override
   Widget build(BuildContext context) {
@@ -138,7 +138,7 @@ class BuildListButtons extends StatelessWidget {
             height: 10,
           ),
           Text(
-            txt,
+            txt!,
             style: TextStyle(
                 color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
           )
